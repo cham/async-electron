@@ -1,0 +1,350 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Electron</title>
+    <link href="http://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Reenie+Beanie" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="highlight.min.css">
+    <style>
+    html {
+        height: 100%;
+        font-family: sans-serif;
+    }
+    h2 {
+        font-size: 2.5em;
+        font-weight: normal;
+        font-style: italic;
+    }
+    body {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        height: 100%;
+        font-size: 1.3em;
+        font-family: Roboto, sans-serif;
+    }
+    iframe , section {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border: 0;
+        z-index: 0;
+    }
+    section {
+        display: none;
+    }
+    ul {
+        padding: 0;
+        margin: 0;
+    }
+    ul li {
+        list-style-type: none;
+    }
+    ul ol li {
+        list-style-type: decimal;
+    }
+    .content {
+        z-index: 1;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: #333;
+        color: #fff;
+        display: none;
+    }
+    .transitionable {
+        transition: left 0.75s ease-in-out;
+    }
+    .subsection {
+        padding: 12px;
+        display: none;
+    }
+    .content .subsection:first-of-type {
+        display: block;
+    }
+    .intro {
+        background: #69f;
+        font-family: 'Reenie Beanie', serif;
+        height: 100%;
+        text-align: center;
+    }
+    .intro h2 {
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #fff;
+    }
+    .intro h3 {
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #fff;
+    }
+    .always-invisible {
+        visibility: hidden;
+        padding: 0;
+    }
+    a {
+        color: #fff;
+    }
+    </style>
+  </head>
+  <body>
+
+    <section class="intro">
+        <h2>Electron</h2>
+        <h3>Dan Neame <a href="https://twitter.com/cham">@cham</a></h3>
+        <h3><a href="github.com/cham/async-electron">github.com/cham/async-electron</a> <a href="http://dan.nea.me">dan.nea.me</a></h3>
+    </section>
+
+    <section class="intro">
+        <h2>Who am I?</h2>
+    </section>
+    <section>
+        <iframe data-src="http://dan.nea.me" width="100%" height="100%" wmode="transparent"></iframe>
+        <div class="content">
+            <div class="subsection">
+                <ul>
+                    <li>Dan Neame</li>
+                    <li>@cham on twitter</li>
+                    <li>http://dan.nea.me</li>
+                    <li>Freelance developer</li>
+                </ul>
+            </div>
+            <div class="subsection always-invisible"></div>
+        </div>
+    </section>
+
+    <section class="intro">
+        <h2>What is Electron?</h2>
+    </section>
+    <section style="background: #fff url(img/apps-list.png) center no-repeat;background-size: contain">
+        <div class="content">
+            <div class="subsection">
+                <ul>
+                  <li>Electron is a framework that allows you to build Desktop applications with Javascript</li>
+                  <li>Open source</li>
+                  <li>Developed by GitHub</li>
+                </ul>
+            </div>
+            <div class="subsection">
+                <ul>
+                    <li>Initially developed for GitHub's Atom editor</li>
+                    <li>Microsoft, Facebook, Slack, Docker, etc</li>
+                </ul>
+            </div>
+            <div class="subsection always-invisible"></div>
+        </div>
+    </section>
+
+    <section class="intro">
+        <h2>How does Electron work?</h2>
+    </section>
+    <section style="background: #fff url(img/Electron.png) center no-repeat;background-size: contain">
+        <div class="content">
+            <div class="subsection">
+                <ul>
+                    <li>Outputs a native client side application, which bundles Chrome</li>
+                    <li>Executes your index.js for the backend</li>
+                    <li>Opens a specified html file in Chrome for the frontend</li>
+                </ul>
+            </div>
+            <div class="subsection">
+                <ul>
+                    <li>Usually trivial to port existing web apps</li>
+                    <li>Allows you to build for the Desktop using existing skills</li>
+                    <li>Gives you access to the user's filesystem, etc</li>
+                </ul>
+            </div>
+            <div class="subsection always-invisible"></div>
+        </div>
+    </section>
+
+    <section class="intro">
+        <h2>Getting started</h2>
+    </section>
+    <section style="background: #282c34 url(img/package.png) center no-repeat;background-size: contain">
+        <div class="content">
+            <div class="subsection">
+                <ul>
+                  <li>Initialise your project as usual</li>
+                </ul>
+<pre><code>npm init</code></pre>
+            </div>
+            <div class="subsection">
+                <ul>
+                  <li>Install electron</li>
+                </ul>
+<pre><code>npm i -D electron@latest</code></pre>
+            </div>
+            <div class="subsection always-invisible"></div>
+        </div>
+    </section>
+    <section style="background: #282c34 url(img/index-html.png) center no-repeat;background-size: contain">
+        <div class="content">
+            <div class="subsection">
+                <ul>
+                    <li>Create your index.html</li>
+                </ul>
+            </div>
+            <div class="subsection always-invisible"></div>
+        </div>
+    </section>
+    <section style="background: #282c34 url(img/index-js.png) center no-repeat;background-size: contain">
+        <div class="content">
+            <div class="subsection">
+                <ul>
+                    <li>Create your index.js</li>
+                </ul>
+            </div>
+            <div class="subsection always-invisible"></div>
+        </div>
+    </section>
+    <section style="background: #282c34 url(img/npm-start.png) center no-repeat;background-size: contain">
+        <div class="content">
+            <div class="subsection">
+                <ul>
+                    <li>Run electron</li>
+                </ul>
+<pre><code>"start": "electron ."</code></pre>
+<pre><code lang="bash">npm start</code></pre>
+            </div>
+            <div class="subsection"><ul><li>Demo</li></ul></div>
+            <div class="subsection always-invisible"></div>
+        </div>
+    </section>
+
+    <section class="intro">
+        <h2>Building a more complicated app</h2>
+    </section>
+    <section style="background: #282c34 url(img/package-more-complicated.png) center no-repeat;background-size: contain">
+        <div class="content">
+            <div class="subsection">
+                <ul>
+                    <li>Anything can generate the frontend javascript</li>
+                    <li>In this example we'll use Webpack</li>
+                </ul>
+            </div>
+            <div class="subsection always-invisible"></div>
+        </div>
+    </section>
+    <section style="background: #282c34 url(img/frontend-more-complicated.png) center no-repeat;background-size: contain">
+        <div class="content">
+            <div class="subsection">
+                <ul>
+                  <li>Here's some example frontend code</li>
+                  <li>Imports several modules to create a 3D globe</li>
+                </ul>
+            </div>
+            <div class="subsection always-invisible"></div>
+        </div>
+    </section>
+    <section style="background: #282c34 url(img/intercept-protocol.png) center no-repeat;background-size: contain">
+        <div class="content">
+            <div class="subsection">
+                <ul>
+                    <li>The app is published to dist/</li>
+                </ul>
+            </div>
+            <div class="subsection">
+                <ul>
+                  <li>We could simply set the pathname to __dirname + dist/index.html</li>
+                  <li>However, we would also need to adjust paths in the generated code</li>
+                </ul>
+            </div>
+            <div class="subsection">
+                <ul>
+                  <li>Instead, we can intercept any file: requests made from the front end</li>
+                  <li>And rewrite them before serving the file</li>
+                </ul>
+            </div>
+            <div class="subsection"><ul><li>Demo</li></ul></div>
+            <div class="subsection always-invisible"></div>
+        </div>
+    </section>
+    <section style="background: #282c34 url(img/interprocess-communication-node.png) center no-repeat;background-size: contain">
+        <div class="content">
+            <div class="subsection">
+                <ul>
+                    <li>What if we want to communicate with the backend process?</li>
+                </ul>
+            </div>
+            <div class="subsection">
+                <ul>
+                    <li>Chrome uses a multi-process architecture</li>
+                    <li>Uses Inter Process Communication to allow it's internal processes to communicate</li>
+                    <li>Electron uses IPC to communicate between Chrome and Node</li>
+                </ul>
+            </div>
+            <div class="subsection always-invisible"></div>
+        </div>
+    </section>
+    <section style="background: #282c34 url(img/interprocess-communication-fe.png) center no-repeat;background-size: contain">
+        <div class="content">
+            <div class="subsection">
+                <ul>
+                    <li>On the frontend we use ipcRenderer from the electron module</li>
+                </ul>
+            </div>
+            <div class="subsection always-invisible"></div>
+        </div>
+    </section>
+    <section style="background: #fff url(img/express.png) center no-repeat;background-size: contain">
+        <div class="content">
+            <div class="subsection">
+                <ul>
+                    <li>Alternatively, spin up your own API and communicate over HTTP</li>
+                    <li>Generally not advised - security concern, and can trip antivirus</li>
+                </ul>
+            </div>
+            <div class="subsection always-invisible"></div>
+        </div>
+    </section>
+
+    <section class="intro">
+        <h2>Packaging</h2>
+    </section>
+    <section style="background: #282c34 url(img/packaging.png) center no-repeat;background-size: contain">
+        <div class="content">
+            <div class="subsection">
+<pre><code>npm i -D electron-packager</code></pre>
+            </div>
+            <div class="subsection">
+<pre><code>    "build-package:linux": "electron-packager . --platform=linux",
+    "build-package:osx": "electron-packager . --platform=darwin",
+    "build-package:windows": "electron-packager . --platform=win32"
+</code></pre>
+            </div>
+            <div class="subsection">
+<pre><code lang="bash">npm run build-package:osx</code></pre>
+            </div>
+            <div class="subsection"><ul><li>Demo</li></ul></div>
+            <div class="subsection">
+              <ul>
+                <li>Other useful options for electron-packager</li>
+                <li><pre><code lang="bash">electron-packager . MyAppName</code></pre></li>
+                <li>--app-version</li>
+                <li>--asar</li>
+                <li>--icon</li>
+                <li>--out</li>
+                <li>--overwrite</li>
+              </ul>
+            </div>
+            <div class="subsection always-invisible"></div>
+        </div>
+    </section>
+
+    <section class="intro">
+        <h2>Fin</h2>
+        <h3>Dan Neame <a href="https://twitter.com/cham">@cham</a></h3>
+        <h3><a href="github.com/cham/async-electron">github.com/cham/async-electron</a> <a href="http://dan.nea.me">dan.nea.me</a></h3>
+    </section>
+
+
+    <script src="highlight.min.js"></script>
+    <script src="slideshow.js"></script>
+  </body>
+</html>

@@ -1,0 +1,15 @@
+{
+  "name": "async-electron-getting-started",
+  "version": "1.0.0",
+  "description": "Example app for getting started with electron",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron ."
+  },
+  "author": "Dan Neame",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^3.0.2"
+  }
+}
