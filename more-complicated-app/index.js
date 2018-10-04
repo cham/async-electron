@@ -5,12 +5,6 @@ const path = require('path')
 const createWindow = () => {
   const win = new BrowserWindow()
 
-  win.loadURL(url.format({
-    pathname: 'index.html',
-    protocol: 'file:',
-    slashes: true
-  }))
-
   win.on('closed', () => {
     app.quit()
   })
@@ -23,6 +17,12 @@ const createWindow = () => {
   }, (err) => {
     if (err) console.error('Failed to register protocol')
   })
+
+  win.loadURL(url.format({
+    pathname: 'index.html',
+    protocol: 'file:',
+    slashes: true
+  }))
 }
 
 app.on('ready', createWindow)
